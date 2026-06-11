@@ -1,50 +1,95 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: black;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
   color: white;
-  text-align: center;
 }
 
+/* HERO */
 .hero {
-  padding: 80px 20px;
-  background: linear-gradient(black, #111);
+  padding: 90px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 52px;
   color: gold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
+.hero p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* BUTTON */
 button {
-  padding: 12px 20px;
+  margin-top: 20px;
+  padding: 14px 28px;
   background: gold;
   border: none;
-  cursor: pointer;
+  border-radius: 10px;
   font-weight: bold;
-  margin-top: 15px;
-  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+button:hover {
+  transform: scale(1.05);
+}
+
+/* BOOKING CARD */
 .booking {
-  padding: 40px 20px;
-  background: #111;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 12px;
+  background: #121212;
+  max-width: 520px;
+  margin: -40px auto 40px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
 }
 
+.booking h2 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.booking p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* INPUTS */
 .booking input {
-  display: block;
   width: 100%;
+  padding: 14px;
   margin: 10px 0;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #1b1b1b;
+  color: white;
 }
 
+.booking input:focus {
+  outline: none;
+  border-color: gold;
+}
+
+/* SECTIONS */
 .info, .contact {
-  padding: 40px;
-  background: #111;
+  text-align: center;
+  padding: 50px 20px;
+  background: #0f0f0f;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: #ccc;
+}
+
+ul li {
+  padding: 6px 0;
 }
