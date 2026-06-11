@@ -7,7 +7,6 @@
 
 <body>
 
-  <!-- HERO -->
   <div class="hero">
     <h1>CROWN BLACK CAR</h1>
     <p>Luxury Black Car & Chauffeur Service</p>
@@ -18,34 +17,25 @@
     </button>
   </div>
 
-  <!-- BOOKING FORM -->
+  <!-- BOOKING FORM (SAFE VERSION) -->
   <div class="booking">
-
     <h2>Book Your Ride</h2>
-    <p>Fill out the form below and we will contact you</p>
 
-    <!-- Netlify Form -->
-    <form name="booking" method="POST" data-netlify="true">
+    <form id="bookingForm">
 
-      <input type="hidden" name="form-name" value="booking">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-
-      <input type="text" name="pickup" placeholder="Pickup Location" required>
-
-      <input type="text" name="dropoff" placeholder="Drop-off Location" required>
-
-      <input type="datetime-local" name="time" required>
-
-      <input type="tel" name="phone" placeholder="Phone Number (323-895-3648)" required>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="pickup" placeholder="Pickup Location" required>
+      <input type="text" id="dropoff" placeholder="Drop-off Location" required>
+      <input type="datetime-local" id="time" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
 
       <button type="submit">Submit Booking</button>
 
     </form>
 
+    <p id="msg"></p>
   </div>
 
-  <!-- SERVICES -->
   <div class="info">
     <h2>Services</h2>
     <ul>
@@ -55,12 +45,35 @@
     </ul>
   </div>
 
-  <!-- CONTACT -->
   <div class="contact">
     <h2>Contact</h2>
     <p>Phone: 323-895-3648</p>
     <p>Email: harnurbehl7@gmail.com</p>
   </div>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let pickup = document.getElementById("pickup").value;
+  let dropoff = document.getElementById("dropoff").value;
+  let time = document.getElementById("time").value;
+  let phone = document.getElementById("phone").value;
+
+  let message = 
+`New Booking Request:
+Name: ${name}
+Pickup: ${pickup}
+Dropoff: ${dropoff}
+Time: ${time}
+Phone: ${phone}`;
+
+  window.location.href = "mailto:harnurbehl7@gmail.com?subject=New Booking&body=" + encodeURIComponent(message);
+
+  document.getElementById("msg").innerText = "Booking sent to email!";
+});
+</script>
 
 </body>
 </html>
