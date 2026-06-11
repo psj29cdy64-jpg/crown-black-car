@@ -21,20 +21,27 @@
     <h2>Book Your Ride</h2>
 
  <form action="https://formsubmit.co/harnurbehl7@gmail.com" method="POST">
+<div class="booking">
+  <h2>Book Your Ride</h2>
 
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://google.com">
+  <form name="booking" method="POST" data-netlify="true">
 
-  <input type="text" name="name" placeholder="Your Name" required>
+    <input type="hidden" name="form-name" value="booking">
 
-  <input type="text" name="pickup" placeholder="Pickup Location" required>
+    <input type="text" name="name" placeholder="Your Name" required>
 
-  <input type="text" name="dropoff" placeholder="Drop-off Location" required>
+    <input type="text" name="pickup" placeholder="Pickup Location" required>
 
-  <input type="datetime-local" name="time" required>
+    <input type="text" name="dropoff" placeholder="Drop-off Location" required>
 
-  <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="datetime-local" name="time" required>
 
+    <input type="tel" name="phone" placeholder="Phone Number (323-895-3648)" required>
+
+    <button type="submit">Submit Booking</button>
+
+  </form>
+</div>
   <button type="submit">Submit Booking</button>
 
 </form>
