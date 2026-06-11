@@ -4,8 +4,10 @@
   <title>Crown Black Car</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+  <!-- HERO -->
   <div class="hero">
     <h1>CROWN BLACK CAR</h1>
     <p>Luxury Black Car & Chauffeur Service</p>
@@ -18,34 +20,29 @@
 
   <!-- BOOKING FORM -->
   <div class="booking">
+
     <h2>Book Your Ride</h2>
+    <p>Fill out the form below and we will contact you</p>
 
- <form action="https://formsubmit.co/harnurbehl7@gmail.com" method="POST">
-<div class="booking">
-  <h2>Book Your Ride</h2>
+    <!-- Netlify Form -->
+    <form name="booking" method="POST" data-netlify="true">
 
-  <form name="booking" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="booking">
 
-    <input type="hidden" name="form-name" value="booking">
+      <input type="text" name="name" placeholder="Your Name" required>
 
-    <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="pickup" placeholder="Pickup Location" required>
 
-    <input type="text" name="pickup" placeholder="Pickup Location" required>
+      <input type="text" name="dropoff" placeholder="Drop-off Location" required>
 
-    <input type="text" name="dropoff" placeholder="Drop-off Location" required>
+      <input type="datetime-local" name="time" required>
 
-    <input type="datetime-local" name="time" required>
+      <input type="tel" name="phone" placeholder="Phone Number (323-895-3648)" required>
 
-    <input type="tel" name="phone" placeholder="Phone Number (323-895-3648)" required>
+      <button type="submit">Submit Booking</button>
 
-    <button type="submit">Submit Booking</button>
-
-  </form>
-</div>
-  <button type="submit">Submit Booking</button>
-
-</form>
     </form>
+
   </div>
 
   <!-- SERVICES -->
